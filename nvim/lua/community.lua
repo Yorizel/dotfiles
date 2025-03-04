@@ -1,0 +1,17 @@
+return {
+  "AstroNvim/astrocommunity",
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
+  { import = "astrocommunity.lsp.nvim-lsp-file-operations" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.workflow.precognition-nvim" },
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.recipes.auto-session-restore" },
+  { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.motion.mini-move" },
+  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.media.cord-nvim" },
+  { import = "astrocommunity.editing-support.yanky-nvim" },
+}

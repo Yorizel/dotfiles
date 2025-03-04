@@ -13,5 +13,8 @@ return {
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.media.cord-nvim" },
+  { import = "astrocommunity.media.codesnap-nvim" },
+  { import = "astrocommunity.media.image-nvim" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 }

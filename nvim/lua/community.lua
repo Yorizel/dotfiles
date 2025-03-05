@@ -1,9 +1,9 @@
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
-  { import = "astrocommunity.lsp.nvim-lsp-file-operations" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.mdx" },
   { import = "astrocommunity.workflow.precognition-nvim" },
@@ -19,5 +19,6 @@ return {
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   { import = "astrocommunity.editing-support.yanky-nvim" },
+  { import = "astrocommunity.editing-support.copilotchat-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 }

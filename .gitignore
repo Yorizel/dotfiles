@@ -2,6 +2,7 @@
 !/nvim/
 !/zellij/
 !/hypr/
+!/lazygit/
 !/.gitignore
 !LICENSE.md
 !README.md

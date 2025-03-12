@@ -10,6 +10,7 @@ Welcome to my dotfiles repository! This collection includes my personal configur
 - [Neovim](#neovim)
 - [Zellij](#zellij)
 - [Hyprland](#hyprland)
+- [LazyGit](#lazygit)
 - [Installation](#installation)
 - [Repository Structure](#repository-structure)
 - [License](#license)
@@ -25,6 +26,10 @@ The [Zellij](zellij) configuration provides a robust terminal multiplexer experi
 ## Hyprland
 
 Explore the [Hyprland](hypr) setup for a dynamic, modern window management experience.
+
+## LazyGit
+
+Explore the [LazyGit](lazygit) configuration that simplifies Git repository management with an intuitive terminal UI interface.
 
 ## Installation
 
@@ -43,6 +48,7 @@ Feel free to fork and modify as needed.
 ├── nvim/      # Neovim configuration
 ├── zellij/    # Zellij terminal multiplexer setup
 ├── hypr/      # Hyprland configuration
+├── lazygit/   # LazyGit configuration
 └── .gitignore # Git ignore rules
 ```
 

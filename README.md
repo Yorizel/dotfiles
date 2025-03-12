@@ -49,6 +49,5 @@ Feel free to fork and modify as needed.
 ├── zellij/    # Zellij terminal multiplexer setup
 ├── hypr/      # Hyprland configuration
 ├── lazygit/   # LazyGit configuration
-└── .gitignore # Git ignore rules
 ```
 

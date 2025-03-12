@@ -52,16 +52,3 @@ Feel free to fork and modify as needed.
 └── .gitignore # Git ignore rules
 ```
 
-## License
-
-This project is released under the [MIT License](LICENSE.md).
-
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-- **No Warranty:** The software is provided "as is", without any express or implied warranty.
-
-For full details, please see the [LICENSE.md](LICENSE.md) file.
-
----
-
-*Last updated: March 2025*

@@ -48,7 +48,13 @@ Feel free to fork and modify as needed.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is released under the [MIT License](LICENSE.md).
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+- **No Warranty:** The software is provided "as is", without any express or implied warranty.
+
+For full details, please see the [LICENSE.md](LICENSE.md) file.
 
 ---
 

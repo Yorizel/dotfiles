@@ -18,7 +18,5 @@ return {
   { import = "astrocommunity.media.image-nvim" },
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   { import = "astrocommunity.recipes.telescope-lsp-mappings" },
-  { import = "astrocommunity.editing-support.yanky-nvim" },
-  { import = "astrocommunity.editing-support.copilotchat-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 }

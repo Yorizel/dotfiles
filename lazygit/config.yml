@@ -131,7 +131,7 @@ customCommands:
           | xargs -I {} bash -c '
               COMMIT_MSG_FILE=$(mktemp)
               echo "{}" > "$COMMIT_MSG_FILE"
-              ${EDITOR:-vim} "$COMMIT_MSG_FILE"
+              ${EDITOR:-nvim} "$COMMIT_MSG_FILE"
               if [ -s "$COMMIT_MSG_FILE" ]; then
                   git commit -F "$COMMIT_MSG_FILE"
               else

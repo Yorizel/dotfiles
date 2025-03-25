@@ -1,4 +1,4 @@
-#Welcome to my dotfiles repository! 
+# Welcome to my dotfiles repository! 
 
 This collection includes my personal configuration files that make up my development environment.
 

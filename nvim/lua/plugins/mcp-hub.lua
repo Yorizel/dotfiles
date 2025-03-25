@@ -4,7 +4,7 @@ return {
     "nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
   },
   -- cmd = "MCPHub", -- lazily start the hub when `MCPHub` is called
-  build = "npm install -g mcp-hub@latest", -- Installs required mcp-hub npm module
+  build = "sudo npm install -g mcp-hub@latest", -- Installs required mcp-hub npm module
   config = function()
     require("mcphub").setup {
       -- Required options
@@ -26,4 +26,22 @@ return {
       },
     }
   end,
+  specs = {
+    {
+      "yetone/avante.nvim",
+      optional = true,
+      opts = {
+        system_prompt = function()
+          local hub = require("mcphub").get_hub_instance()
+          return hub:get_active_servers_prompt()
+        end,
+        -- The custom_tools type supports both a list and a function that returns a list. Using a function here prevents requiring mcphub before it's loaded
+        custom_tools = function()
+          return {
+            require("mcphub.extensions.avante").mcp_tool(),
+          }
+        end,
+      },
+    },
+  },
 }

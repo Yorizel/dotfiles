@@ -3,8 +3,8 @@ return {
   {
     "yetone/avante.nvim",
     build = vim.fn.has "win32" == 1 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-      or "make",
-    event = "User AstroFile", -- load on file open because Avante manages it's own bindings
+        or "make",
+    event = "User AstroFile", -- load on file open because Avante manages its own bindings
     cmd = {
       "AvanteAsk",
       "AvanteBuild",
@@ -50,68 +50,43 @@ return {
         },
       },
     },
-
     specs = { -- configure optional plugins
       { "AstroNvim/astroui", opts = { icons = { Avante = "" } } },
       {
         "nvim-neo-tree/neo-tree.nvim",
         optional = true,
-        opts = function(_, opts)
-          local ok, _ = pcall(require, "neo-tree")
-          if not ok then return opts end
-          return require("astrocore").extend_tbl(opts, {
-            filesystem = {
-              commands = {
-                avante_add_files = function(state)
-                  local node = state.tree:get_node()
-                  local filepath = node:get_id()
-                  local relative_path = require("avante.utils").relative_path(filepath)
+        opts = {
+          filesystem = {
+            commands = {
+              avante_add_files = function(state)
+                local node = state.tree:get_node()
+                local filepath = node:get_id()
+                local relative_path = require("avante.utils").relative_path(filepath)
 
-                  local sidebar = require("avante").get()
+                local sidebar = require("avante").get()
 
-                  local open = sidebar:is_open()
-                  -- ensure avante sidebar is open
-                  if not open then
-                    require("avante.api").ask()
-                    sidebar = require("avante").get()
-                  end
+                local open = sidebar:is_open()
+                -- ensure avante sidebar is open
+                if not open then
+                  require("avante.api").ask()
+                  sidebar = require("avante").get()
+                end
 
-                  sidebar.file_selector:add_selected_file(relative_path)
+                sidebar.file_selector:add_selected_file(relative_path)
 
-                  -- remove neo tree buffer
-                  if not open then sidebar.file_selector:remove_selected_file "neo-tree filesystem [1]" end
-                end,
-              },
-              window = {
-                mappings = {
-                  ["oa"] = "avante_add_files",
-                },
-              },
+                -- remove neo tree buffer
+                if not open then sidebar.file_selector:remove_selected_file "neo-tree filesystem [1]" end
+              end,
             },
-          })
-        end,
-      },
-      {
-        "ravitemer/mcphub.nvim",
-        optional = true,
-        specs = {
-          {
-            "yetone/avante.nvim",
-            opts = {
-              system_prompt = function()
-                local hub = require("mcphub").get_hub_instance()
-                return hub:get_active_servers_prompt()
-              end,
-              -- The custom_tools type supports both a list and a function that returns a list. Using a function here prevents requiring mcphub before it's loaded
-              custom_tools = function()
-                return {
-                  require("mcphub.extensions.avante").mcp_tool(),
-                }
-              end,
+          },
+          window = {
+            mappings = {
+              ["oa"] = "avante_add_files",
             },
           },
         },
       },
+
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",
@@ -141,7 +116,6 @@ return {
           },
         },
       },
-
       {
         -- make sure `Avante` is added as a filetype
         "OXY2DEV/markview.nvim",

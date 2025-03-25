@@ -60,7 +60,7 @@ customCommands:
       - type: "confirm"
         title: "Is the commit message correct?"
         body: "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"
-  - key: <c-a>
+  - key: "G"
     description: Pick AI commit
     command: |
       aichat "Please suggest 10 commit messages, given the following diff:

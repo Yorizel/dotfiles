@@ -1,5 +1,3 @@
-# Yorizel's Dotfiles
-
 Welcome to my dotfiles repository! This collection includes my personal configuration files that make up my development environment.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE.md)

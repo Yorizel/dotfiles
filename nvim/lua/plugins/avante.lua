@@ -26,7 +26,6 @@ return {
       { "AstroNvim/astrocore", opts = function(_, opts) opts.mappings.n[prefix] = { desc = " Avante" } end },
     },
     opts = {
-
       mappings = {
         ask = prefix .. "<CR>",
         edit = prefix .. "e",
@@ -47,6 +46,7 @@ return {
           prev = "[c",
         },
         files = {
+          add_all_buffers = prefix .. "B",
           add_current = prefix .. ".",
         },
       },
@@ -54,27 +54,23 @@ return {
     specs = { -- configure optional plugins
       { "AstroNvim/astroui", opts = { icons = { Avante = "" } } },
       {
-        "saghen/blink.cmp",
-        dependencies = {
-          "Kaiser-Yang/blink-cmp-avante",
-        },
-        opts = {
-          sources = {
-            -- Add 'avante' to the list
-            default = { "avante", "lsp", "path", "buffer" },
-            providers = {
-              avante = {
-                module = "blink-cmp-avante",
-                name = "Avante",
-                opts = {
-                  -- options for blink-cmp-avante
+        "Kaiser-Yang/blink-cmp-avante",
+        lazy = true,
+        specs = {
+          {
+            "Saghen/blink.cmp",
+            optional = true,
+            opts = {
+              sources = {
+                default = { "avante" },
+                providers = {
+                  avante = { module = "blink-cmp-avante", name = "Avante" },
                 },
               },
             },
           },
         },
       },
-
       {
         "nvim-neo-tree/neo-tree.nvim",
         optional = true,
@@ -129,10 +125,6 @@ return {
       },
       { -- if copilot.lua is available, default to copilot provider
         "zbirenbaum/copilot.lua",
-
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function() require("copilot").setup {} end,
         specs = {
           {
             "yetone/avante.nvim",
@@ -157,6 +149,20 @@ return {
                 model = "claude-3.7-sonnet",
               },
             },
+          },
+        },
+      },
+      {
+        "folke/snacks.nvim",
+        optional = true,
+        specs = {
+          {
+            "yetone/avante.nvim",
+            opts = {
+              file_selector = {
+                provider = "snacks",
+              }
+            }
           },
         },
       },

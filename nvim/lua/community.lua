@@ -15,9 +15,12 @@ return {
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.media.cord-nvim" },
   { import = "astrocommunity.media.codesnap-nvim" },
+  { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  { import = "astrocommunity.recipes.picker-nvchad-theme" },
+  { import = "astrocommunity.recipes.diagnostic-virtual-lines-current-line" },
 }

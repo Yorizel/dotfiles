@@ -125,29 +125,26 @@ return {
       },
       { -- if copilot.lua is available, default to copilot provider
         "zbirenbaum/copilot.lua",
+        optional = true,
         specs = {
           {
             "yetone/avante.nvim",
             opts = {
               vendors = {
-                ["copilot-claude-3.7"] = {
+                ["copilot-3.7-sonnet"] = {
                   __inherited_from = "copilot",
                   model = "claude-3.7-sonnet",
                 },
-                ["copilot-claude-3.7-thinking"] = {
-                  __inherited_from = "copilot",
-                  model = "claude-3.7-sonnet-thought",
-                  temperature = 1,
-                },
-                ["copilot-claude-3.5"] = {
+                ["copilot-3.5-sonnet"] = {
                   __inherited_from = "copilot",
                   model = "claude-3.5-sonnet",
                 },
+                ["copilot-2.5-pro"] = {
+                  __inherited_from = "copilot",
+                  model = "gemini-2.5-pro",
+                },
               },
               provider = "copilot",
-              copilot = {
-                model = "claude-3.7-sonnet",
-              },
             },
           },
         },
@@ -159,20 +156,20 @@ return {
           {
             "yetone/avante.nvim",
             opts = {
-              file_selector = {
+              selector = {
                 provider = "snacks",
-              }
-            }
+              },
+            },
           },
         },
       },
       {
         -- make sure `Avante` is added as a filetype
-        "OXY2DEV/markview.nvim",
+        "MeanderingProgrammer/render-markdown.nvim",
         optional = true,
         opts = function(_, opts)
-          if not opts.filetypes then opts.filetypes = { "markdown", "quarto", "rmd" } end
-          opts.filetypes = require("astrocore").list_insert_unique(opts.filetypes, { "Avante" })
+          if not opts.file_types then opts.file_types = { "markdown" } end
+          opts.file_types = require("astrocore").list_insert_unique(opts.file_types, { "Avante" })
         end,
       },
     },

@@ -131,18 +131,6 @@ return {
             "yetone/avante.nvim",
             opts = {
               vendors = {
-                ["copilot-3.7-sonnet"] = {
-                  __inherited_from = "copilot",
-                  model = "claude-3.7-sonnet",
-                },
-                ["copilot-3.5-sonnet"] = {
-                  __inherited_from = "copilot",
-                  model = "claude-3.5-sonnet",
-                },
-                ["copilot-2.0-flash"] = {
-                  __inherited_from = "copilot",
-                  model = "gemini-2.0-flash",
-                },
                 ["copilot-2.5-pro"] = {
                   __inherited_from = "copilot",
                   model = "gemini-2.5-pro",

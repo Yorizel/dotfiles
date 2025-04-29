@@ -18,25 +18,7 @@ This setup includes configurations for:
     ```bash
     git clone https://github.com/Yorizel/dotfiles.git ~/.config
     ```
-3.  **Symlink/Copy:** Create symbolic links from your home directory or `.config` directory to the corresponding files in this repository, or copy the files directly. Tools like `stow` can help manage this process.
-    - Example for Neovim (if cloned to `~/.dotfiles`):
-      ```bash
-      ln -s ~/.dotfiles/nvim ~/.config/nvim
-      ```
-    - Example for Tmux:
-      ```bash
-      ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
-      ln -s ~/.dotfiles/tmux/tmux.conf.local ~/.tmux.conf.local
-      ```
-    - Example for Hyprland:
-      ```bash
-      ln -s ~/.dotfiles/hypr ~/.config/hypr
-      ```
-    - Example for Lazygit:
-      ```bash
-      ln -s ~/.dotfiles/lazygit ~/.config/lazygit
-      ```
-4.  **Dependencies:** Ensure you have the necessary base tools installed (e.g., `neovim`, `hyprland`, `tmux`, `git`, `lazygit`, `stow` if used, Nerd Fonts). Specific plugin managers or dependencies (like `mason-tool-installer` for Neovim) might install further requirements automatically upon first run.
+3.  **Dependencies:** Ensure you have the necessary base tools installed (e.g., `neovim`, `hyprland`, `tmux`, `git`, `lazygit`, `stow` if used, Nerd Fonts). Specific plugin managers or dependencies (like `mason-tool-installer` for Neovim) might install further requirements automatically upon first run.
 
 ## Key Features
 

@@ -33,7 +33,7 @@ return {
         focus = prefix .. "f",
         select_model = prefix .. "?",
         stop = prefix .. "S",
-        select_history = prefix .. "h",
+        select_history = prefix .. "H",
         toggle = {
           default = prefix .. "t",
           debug = prefix .. "d",
@@ -138,6 +138,10 @@ return {
                 ["copilot-3.5-sonnet"] = {
                   __inherited_from = "copilot",
                   model = "claude-3.5-sonnet",
+                },
+                ["copilot-2.0-flash"] = {
+                  __inherited_from = "copilot",
+                  model = "gemini-2.0-flash",
                 },
                 ["copilot-2.5-pro"] = {
                   __inherited_from = "copilot",

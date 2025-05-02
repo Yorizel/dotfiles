@@ -135,10 +135,7 @@ return {
                   __inherited_fromted_from = "copilot",
                   model = "claude-3.7-sonnet",
                 },
-                ["copilot:3.5-sonnet"] = {
-                  __inherited_from = "copilot",
-                  model = "claude-3.5-sonnet",
-                },
+
                 ["copilot:o4-mini"] = {
                   __inherited_from = "copilot",
                   model = "o4-mini",

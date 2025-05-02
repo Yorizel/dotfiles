@@ -18,6 +18,8 @@ return {
   { import = "astrocommunity.media.codesnap-nvim" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+  { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },

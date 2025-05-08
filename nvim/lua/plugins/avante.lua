@@ -125,7 +125,6 @@ return {
       },
       { -- if copilot.lua is available, default to copilot provider
         "zbirenbaum/copilot.lua",
-        optional = true,
         specs = {
           {
             "yetone/avante.nvim",

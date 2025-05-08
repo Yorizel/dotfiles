@@ -3,7 +3,6 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.mdx" },
@@ -13,6 +12,7 @@ return {
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.git.octo-nvim" },
   { import = "astrocommunity.media.cord-nvim" },
   { import = "astrocommunity.media.codesnap-nvim" },
@@ -24,4 +24,5 @@ return {
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.recipes.diagnostic-virtual-lines-current-line" },
+  { import = "astrocommunity.recipes.ai" },
 }

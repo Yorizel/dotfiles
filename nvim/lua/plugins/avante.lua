@@ -28,6 +28,7 @@ return {
     opts = {
       mappings = {
         ask = prefix .. "<CR>",
+        new_ask = prefix .. "n",
         edit = prefix .. "e",
         refresh = prefix .. "r",
         focus = prefix .. "f",
@@ -129,25 +130,6 @@ return {
           {
             "yetone/avante.nvim",
             opts = {
-              vendors = {
-                ["copilot:3.7-sonnet"] = {
-                  __inherited_fromted_from = "copilot",
-                  model = "claude-3.7-sonnet",
-                },
-
-                ["copilot:o4-mini"] = {
-                  __inherited_from = "copilot",
-                  model = "o4-mini",
-                },
-                ["copilot:gpt-4.1"] = {
-                  __inherited_from = "copilot",
-                  model = "gpt-4.1",
-                },
-                ["copilot:2.5-pro"] = {
-                  __inherited_from = "copilot",
-                  model = "gemini-2.5-pro",
-                },
-              },
               provider = "copilot",
             },
           },
@@ -169,11 +151,11 @@ return {
       },
       {
         -- make sure `Avante` is added as a filetype
-        "MeanderingProgrammer/render-markdown.nvim",
+        "OXY2DEV/markview.nvim",
         optional = true,
         opts = function(_, opts)
-          if not opts.file_types then opts.file_types = { "markdown" } end
-          opts.file_types = require("astrocore").list_insert_unique(opts.file_types, { "Avante" })
+          if not opts.preview.filetypes then opts.preview.filetypes = { "markdown", "quarto", "rmd" } end
+          opts.preview.filetypes = require("astrocore").list_insert_unique(opts.preview.filetypes, { "Avante" })
         end,
       },
     },

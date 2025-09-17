@@ -5,8 +5,6 @@ return {
   { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },
-  { import = "astrocommunity.media.cord-nvim" },
-  { import = "astrocommunity.media.codesnap-nvim" },
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.git.mini-diff" },
   { import = "astrocommunity.colorscheme.catppuccin" },
@@ -16,4 +14,5 @@ return {
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.recipes.ai" },
+  { import = "astrocommunity.editing-support.codecompanion-nvim" },
 }

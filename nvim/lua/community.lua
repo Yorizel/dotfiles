@@ -15,4 +15,6 @@ return {
   { import = "astrocommunity.recipes.picker-nvchad-theme" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.editing-support.codecompanion-nvim" },
+  { import = "astrocommunity.editing-support.mcphub-nvim" },
+  { import = "astrocommunity.editing-support.vector-code-nvim" },
 }

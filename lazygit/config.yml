@@ -1,11 +1,6 @@
 customCommands:
   - key: "G"
     context: "files"
-    command: 'zsh -c ''COMMIT_MSG=$(lumen draft); echo "$COMMIT_MSG"; git commit -m "$COMMIT_MSG"'''
-    loadingText: "Generating message and committing..."
-    output: popup
-  - key: "<c-g>"
-    context: "files"
     command: 'zsh -c ''COMMIT_MSG=$(lumen draft -c {{.Form.Context | quote}}); echo "$COMMIT_MSG"; git commit -m "$COMMIT_MSG"'''
     loadingText: "Generating message and committing..."
     prompts:

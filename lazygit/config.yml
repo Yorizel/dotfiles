@@ -1,10 +1,10 @@
 customCommands:
   - key: "G"
     context: "files"
-    command: 'zsh -c ''COMMIT_MSG=$(lumen draft -c {{.Form.Context | quote}}); echo "$COMMIT_MSG"; git commit -m "$COMMIT_MSG"'''
+    command: 'zsh -c ''COMMIT_MSG=$(lumen draft -c "Generate a commit message in the format type({{.Form.Scope | quote}}): description for these git changes"); echo "$COMMIT_MSG"; git commit -m "$COMMIT_MSG"'''
     loadingText: "Generating message and committing..."
     prompts:
       - type: "input"
-        title: "Context"
-        key: "Context"
+        title: "Scope"
+        key: "Scope"
     output: popup

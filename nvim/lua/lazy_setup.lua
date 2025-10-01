@@ -17,6 +17,8 @@ require("lazy").setup({
 } --[[@as LazySpec]], {
   -- Configure any other `lazy.nvim` configuration options here
   install = { colorscheme = { "astrotheme", "habamax" } },
+  vim.lsp.enable "copilot-language-server",
+
   ui = { backdrop = 100 },
   performance = {
     rtp = {

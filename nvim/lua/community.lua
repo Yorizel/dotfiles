@@ -1,7 +1,7 @@
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   { import = "astrocommunity.recipes.auto-session-restore" },
+  { import = "astrocommunity.recipes.neovide" },
   { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },

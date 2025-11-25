@@ -60,13 +60,13 @@ return {
       },
     },
   },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    optional = true,
-    opts = function(_, opts)
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed or {}, { "vtsls" })
-    end,
-  },
+  -- {
+  --   "williamboman/mason-lspconfig.nvim",
+  --   optional = true,
+  --   opts = function(_, opts)
+  --     opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed or {}, { "vtsls" })
+  --   end,
+  -- },
   {
     "jay-babu/mason-nvim-dap.nvim",
     optional = true,
@@ -79,7 +79,7 @@ return {
     optional = true,
     opts = function(_, opts)
       opts.ensure_installed =
-        require("astrocore").list_insert_unique(opts.ensure_installed or {}, { "vtsls", "js-debug-adapter" })
+        require("astrocore").list_insert_unique(opts.ensure_installed or {}, { "js-debug-adapter" })
     end,
   },
   {

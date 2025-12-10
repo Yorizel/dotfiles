@@ -2,6 +2,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.recipes.auto-session-restore" },
   { import = "astrocommunity.recipes.neovide" },
+  { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
   { import = "astrocommunity.note-taking.obsidian-nvim" },

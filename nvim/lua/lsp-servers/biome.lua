@@ -1,6 +1,18 @@
 ---@type LazySpec
 return {
   {
+    "AstroNvim/astrolsp",
+    opts = {
+      formatting = {
+        format_on_save = {
+          enabled = true, -- make sure this isn't false
+          -- optional: only use for certain filetypes
+          -- allow_filetypes = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
+        },
+      },
+    },
+  },
+  {
     "williamboman/mason-lspconfig.nvim",
     opts = function(_, opts)
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "biome" })
